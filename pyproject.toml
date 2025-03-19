@@ -1,5 +1,5 @@
 [project]
-name = "mcp-server-memos"
+name = "memos-mcp-server"
 version = "0.1.0"
 authors = [{ name = "Leslie Leung", email = "lesily9@gmail.com" }]
 description = "A MCP server for the Memos API"
@@ -20,7 +20,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/leslieleung/mcp-server-memos/issues"
 
 [project.scripts]
-mcp-server-memos = "main:main"
+memos-mcp-server = "main:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]

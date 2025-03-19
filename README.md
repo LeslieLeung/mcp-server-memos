@@ -1,4 +1,4 @@
-# mcp-server-memos
+# memos-mcp-server
 
 A [MCP(Model Context Protocol)](https://modelcontextprotocol.io) server for [Memos](https://github.com/usememos/memos).
 
@@ -15,7 +15,7 @@ A [MCP(Model Context Protocol)](https://modelcontextprotocol.io) server for [Mem
         "memos": {
             "command": "uvx",
             "args": [
-                "mcp-server-memos"
+                "memos-mcp-server"
             ],
             "env": {
                 "MEMOS_URL": "https://memos.example.com",
