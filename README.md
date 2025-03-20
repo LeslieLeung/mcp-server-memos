@@ -1,4 +1,5 @@
 # memos-mcp-server
+[![smithery badge](https://smithery.ai/badge/@LeslieLeung/mcp-server-memos)](https://smithery.ai/server/@LeslieLeung/mcp-server-memos)
 
 A [MCP(Model Context Protocol)](https://modelcontextprotocol.io) server for [Memos](https://github.com/usememos/memos).
 
@@ -8,6 +9,14 @@ A [MCP(Model Context Protocol)](https://modelcontextprotocol.io) server for [Mem
 - `create_memo`: Create a new memo.
 
 ## Usage
+
+### Installing via Smithery
+
+To install mcp-server-memos for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@LeslieLeung/mcp-server-memos):
+
+```bash
+npx -y @smithery/cli install @LeslieLeung/mcp-server-memos --client claude
+```
 
 ```
 {
