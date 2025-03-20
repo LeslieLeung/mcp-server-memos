@@ -1,0 +1,39 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - MEMOS_URL
+      - MEMOS_API_KEY
+    properties:
+      MEMOS_URL:
+        type: string
+        default: https://memos.example.com
+        description: URL of the memos server.
+      MEMOS_API_KEY:
+        type: string
+        default: your_api_key
+        description: API key for authenticating with the memos server.
+      DEFAULT_TAG:
+        type: string
+        default: "#MCP"
+        description: Default tag to use when creating memos.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['main.py'],
+      env: {
+        MEMOS_URL: config.MEMOS_URL,
+        MEMOS_API_KEY: config.MEMOS_API_KEY,
+        DEFAULT_TAG: config.DEFAULT_TAG || '#MCP'
+      }
+    })
+  exampleConfig:
+    MEMOS_URL: https://memos.example.com
+    MEMOS_API_KEY: dummy_api_key
+    DEFAULT_TAG: "#MCP"
